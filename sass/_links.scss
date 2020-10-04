@@ -21,9 +21,7 @@
 
 [class^="link"]:not(.link-codepen) {
   min-height: 3em;
-  background-color: var(--color-primary);
-  color: #fff;
-  box-shadow: 0.18em 0.18em var(--color-secondary);
+  background-color: var(--color-tertiary);
 }
 
 [class^="link"]:not(.link-codepen),
@@ -31,18 +29,19 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 0 0.75em;
+  padding: 1.7em 2em;
   transform: translate(0, 0);
   transition: 180ms all ease-in-out;
-  font-size: 1.125rem;
+  font-size: 0.9rem;
   line-height: 1;
-  text-align: center;
   text-decoration: none;
+  border-radius: 500px;
+  text-transform: uppercase;
+  color: var(--color-secondary);
 
   &:hover,
   &:focus {
-    transform: translate(-0.15em, -0.15em);
-    box-shadow: 0.3em 0.3em var(--color-secondary);
+    background-color: var(--color-primary-alt)
   }
 
   &:focus {
@@ -51,19 +50,17 @@
   }
 }
 
-// stylelint-disable-next-line no-descending-specificity
+//// stylelint-disable-next-line no-descending-specificity
 .page-footer [class^="link"] {
   width: 100%;
   min-height: 2.5em;
-  background-color: var(--color-background);
-  color: var(--color-primary);
 }
 
 .link-codepen {
   display: block;
   margin-top: 3rem;
   font-size: var(--font-size-h4);
-
+  font-weight: var(--font-weight-strong);
   &::before {
     position: absolute;
     padding-right: 1.25em;
@@ -72,7 +69,7 @@
     background-repeat: no-repeat;
     background-position: right 130%;
     background-size: 14%;
-    color: #6f6ffd;
+    color: var(--color-secondary);
     font-size: 0.85em;
     content: "Jump right in";
   }

@@ -3,26 +3,27 @@
     position: relative;
 
     p:nth-of-type(2) {
-      align-self: center;
       margin-top: 2rem;
       color: var(--color-secondary);
       font-size: 1.5em;
       font-weight: var(--font-weight-strong);
-      text-align: center;
     }
 
     ul {
       display: flex;
       flex-wrap: wrap;
-      justify-content: center;
+      justify-content: flex-start;
       margin: 1rem 0 2rem;
       padding: 0;
       list-style: none;
 
       li {
         margin: 0.25em;
-        padding: 0.25em 0.5em;
-        background-color: var(--color-light);
+        padding: 0.3em 0.9em;
+        color: var(--color-background-dark);
+        font-weight: var(--font-weight-strong);
+
+        background-color: var(--color-primary-alt);
       }
     }
 

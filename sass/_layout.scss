@@ -8,13 +8,14 @@ body {
 main {
   padding-top: 5vh;
   padding-bottom: 5vh;
+  background-color: #072540;
 
   &:focus {
     outline: none;
   }
 
   h3 {
-    color: var(--color-primary);
+    color: var(--color-secondary);
   }
 }
 
@@ -30,10 +31,11 @@ article {
 
 article,
 .page-footer,
+header,
 #styles {
   .container {
     width: 100%;
-    max-width: 80ch;
+    max-width: 1100px;
     margin-right: auto;
     margin-left: auto;
   }
@@ -52,3 +54,4 @@ article,
   grid-gap: 1em;
   list-style: none;
 }
+
