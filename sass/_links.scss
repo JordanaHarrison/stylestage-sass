@@ -4,10 +4,11 @@
   left: -10000px;
   width: 1px;
   height: 1px;
-  background-color: var(--color-secondary);
+  background-color: var(--color-tertiary);
   color: #fff;
   font-size: 1.125rem;
   overflow: hidden;
+  border: 1px solid white;
 
   &:focus {
     position: fixed;
@@ -29,24 +30,25 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 1.7em 2em;
+  padding: 1.4em 1.5em;
   transform: translate(0, 0);
   transition: 180ms all ease-in-out;
-  font-size: 0.9rem;
+  font-size: 1rem;
   line-height: 1;
   text-decoration: none;
   border-radius: 500px;
   text-transform: uppercase;
   color: var(--color-secondary);
-
+  font-weight: var(--font-weight-strong);
   &:hover,
   &:focus {
-    background-color: var(--color-primary-alt)
+    background-color: var(--color-primary-alt);
+    color: var(--color-background-dark);
   }
 
   &:focus {
     outline-color: transparent;
-    outline-style: solid;
+    outline-style: dashed;
   }
 }
 

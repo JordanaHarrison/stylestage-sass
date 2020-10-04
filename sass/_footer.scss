@@ -33,8 +33,10 @@
     color: var(--color-primary-alt);
   }
 
-  ul {
-    grid-template-columns: repeat(auto-fit, minmax(12ch, auto));
+  @media screen and (min-width: 750px) {
+    ul {
+      grid-template-columns: repeat(auto-fit, minmax(12ch, auto));
+    }
   }
 
   .container > :last-child {

@@ -4,8 +4,8 @@
   --color-primary: #93c2db;
   --color-primary-alt: #ff8ae2;
   --color-secondary: white;
-  --color-tertiary: #0069ff;
-  --color-background: #183d5d;
+  --color-tertiary: #3385FF;
+  --color-background: #0d304e;
   --color-background-dark: #072540;
   --color-text: #93c2db;
   --color-light: #fff;
@@ -137,6 +137,13 @@ a {
   text-decoration: none;
 }
 
+p a, li a {
+  text-decoration: underline;
+}
+p a:hover, li a:hover {
+  text-decoration: none;
+}
+
 blockquote {
   position: relative;
   display: grid;
@@ -227,7 +234,7 @@ article .container,
 header .container,
 #styles .container {
   width: 100%;
-  max-width: 1100px;
+  max-width: 900px;
   margin-right: auto;
   margin-left: auto;
 }
@@ -272,7 +279,7 @@ nav ul {
   justify-content: flex-start;
   list-style: none;
   width: 100%;
-  max-width: 1100px;
+  max-width: 900px;
   margin: 0 auto;
   padding: 0;
 }
@@ -428,8 +435,7 @@ nav ul li {
   place-content: center;
   padding: 0.5em;
   grid-gap: 0.5rem;
-  border: 1px solid var(--color-light);
-  background-color: var(--color-secondary);
+  background-color: var(--color-background-dark);
   line-height: 1.1;
 }
 .features li > span a {
@@ -460,8 +466,8 @@ nav ul li {
 
 #styles .features li,
 .features.patterned li {
-  background-color: var(--color-secondary);
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='36' height='72' viewBox='0 0 36 72'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%23fff' fill-opacity='0.4'%3E%3Cpath d='M2 6h12L8 18 2 6zm18 36h12l-6 12-6-12z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  border: 2px solid var(--color-primary-alt);
 }
 @media (min-width: 515px) and (max-width: 765px) {
   #styles .features li:nth-last-child(1):nth-child(odd),
@@ -517,6 +523,7 @@ nav ul li {
 .profile ul {
   display: flex;
   flex-wrap: wrap;
+  flex-direction: row;
   justify-content: center;
   margin: 0;
   padding: 0;
@@ -529,11 +536,13 @@ nav ul li {
 .profile ul li span:nth-child(1) {
   width: auto;
   margin-right: 0.25em;
+  color: var(--color-primary-alt);
   font-weight: var(--font-weight-strong);
 }
 .profile ul li span:nth-child(2) {
   flex-grow: 1;
   word-break: break-word;
+  color: white;
 }
 .profile ul li span:nth-child(2) a {
   color: inherit;
@@ -543,18 +552,20 @@ nav ul li {
     position: fixed;
     right: 2vmin;
     bottom: 2vmin;
-    max-width: 30ch;
+    max-width: 25ch;
     margin-bottom: 0;
-    border: 4px solid var(--color-primary-alt);
-    border-radius: var(--border-radius);
-    background-color: var(--color-background);
+    border: 1px solid var(--color-primary-alt);
+    background-color: var(--color-background-dark);
     box-shadow: 0 5px 5px rgba(147, 194, 219, 0.15);
   }
   .profile ul {
     justify-content: unset;
+    flex-direction: unset;
   }
   .profile ul li {
     padding: 0;
+    margin-bottom: 10px;
+    flex-direction: column;
   }
   .profile ul li span:nth-child(1) {
     width: 8ch;
@@ -597,8 +608,10 @@ nav ul li {
 .page-footer p a {
   color: var(--color-primary-alt);
 }
-.page-footer ul {
-  grid-template-columns: repeat(auto-fit, minmax(12ch, auto));
+@media screen and (min-width: 750px) {
+  .page-footer ul {
+    grid-template-columns: repeat(auto-fit, minmax(12ch, auto));
+  }
 }
 .page-footer .container > :last-child {
   margin-bottom: 0;
@@ -610,10 +623,11 @@ nav ul li {
   left: -10000px;
   width: 1px;
   height: 1px;
-  background-color: var(--color-secondary);
+  background-color: var(--color-tertiary);
   color: #fff;
   font-size: 1.125rem;
   overflow: hidden;
+  border: 1px solid white;
 }
 .skip-link:focus {
   position: fixed;
@@ -634,25 +648,27 @@ nav ul li {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 1.7em 2em;
+  padding: 1.4em 1.5em;
   transform: translate(0, 0);
   transition: 180ms all ease-in-out;
-  font-size: 0.9rem;
+  font-size: 1rem;
   line-height: 1;
   text-decoration: none;
   border-radius: 500px;
   text-transform: uppercase;
   color: var(--color-secondary);
+  font-weight: var(--font-weight-strong);
 }
 [class^=link]:not(.link-codepen):hover, [class^=link]:not(.link-codepen):focus,
 .profile .container > a:hover,
 .profile .container > a:focus {
   background-color: var(--color-primary-alt);
+  color: var(--color-background-dark);
 }
 [class^=link]:not(.link-codepen):focus,
 .profile .container > a:focus {
   outline-color: transparent;
-  outline-style: solid;
+  outline-style: dashed;
 }
 
 .page-footer [class^=link] {
